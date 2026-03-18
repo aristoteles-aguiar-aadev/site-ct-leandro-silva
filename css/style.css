@@ -6,6 +6,7 @@
   --light: #f4f4f2;
   --white: #ffffff;
   --border: #e2e2e0;
+  --dev-lab: #74f44d;
 }
 
 * {
@@ -300,7 +301,6 @@ body {
 
   .hero-eyebrow,
   .hero-title,
-  .hero-sub,
   .belt-badge,
   .hero-btns {
     align-self: center;
@@ -326,10 +326,6 @@ body {
     width: 100%;
     text-align: center;
   }
-
-  .belt-badge {
-    width: 100%;
-  }
 }
 
 .belt-badge {
@@ -338,7 +334,7 @@ body {
   gap: 14px;
   border: 1.5px solid var(--border);
   padding: 11px 18px;
-  margin-bottom: 38px;
+  margin: 20px 0 38px;
   animation: fadeUp 0.7s 0.3s ease both;
   background: var(--light);
 }
@@ -383,10 +379,9 @@ body {
 
 .hero-btns {
   display: flex;
-  gap: 14px;
+  gap: 115px;
   animation: fadeUp 0.7s 0.4s ease both;
 }
-
 .btn-red {
   background: var(--red);
   color: #fff;
@@ -1076,24 +1071,27 @@ footer {
   color: rgba(255, 255, 255, 0.15);
   text-transform: uppercase;
 }
-.footer-dev {
+.footer-dev,
+.footer-dev span {
   font-size: 1rem;
-  color: var(--text-devlab);
+  color: var(--dev-lab);
 }
 
 .footer-dev-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--text-devlab);
+  color: var(--dev-lab);
   text-decoration: none;
   font-weight: 600;
 }
 
 .footer-dev-link:hover {
-  color: var(--text-devlab);
+  color: var(--light);
 }
-
+.footer-dev:hover {
+  color: var(--light);
+}
 .footer-dev-logo {
   width: 120px;
   height: auto;
@@ -1142,7 +1140,7 @@ footer {
     min-height: auto;
   }
   .hero-left::after {
-    display: none;
+    display: flex;
   }
   .hero-right {
     display: none;
@@ -1156,9 +1154,27 @@ footer {
     min-height: auto;
     margin: 14px 0 20px;
   }
+  .hero-tiger img {
+    width: 280px;
+    height: auto;
+    display: flex;
+    margin: 0 0 0 50px;
+  }
   .wrap {
     padding: 0 28px;
   }
+  .nav-links a {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .belt-center {
+    display: flex;
+  }
+
   .sobre-grid,
   .contact-grid,
   .footer-main {
@@ -1183,6 +1199,27 @@ footer {
   .belt-nav-bar {
     padding: 0 20px;
   }
+  .belt-stripes span {
+    display: none;
+  }
+  .belt-badge {
+    width: 90%;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    border: 1.5px solid var(--border);
+    padding: 11px 18px;
+    margin-bottom: 38px;
+    animation: fadeUp 0.7s 0.3s ease both;
+    background: var(--light);
+    margin-top: 17px;
+  }
+  .hero-btns {
+    width: 90%;
+    max-width: 340px;
+    flex-direction: column;
+    gap: 14px;
+  }
   .nav-links {
     gap: 16px;
   }
@@ -1192,17 +1229,48 @@ footer {
     gap: 6px;
   }
   .footer-dev {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    font-size: 0.2rem;
+    color: var(--dev-lab);
   }
 
   .footer-dev a {
-    color: var(--white);
+    color: var(--dev-lab);
     text-decoration: none;
     font-weight: 600;
   }
 
   .footer-dev a:hover {
-    color: var(--red);
+    color: var(--light);
+  }
+}
+@media (max-width: 768px) {
+  .nav-links a {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .belt-badge {
+    width: 90%;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    border: 1.5px solid var(--border);
+    padding: 11px 18px;
+    margin-bottom: 38px;
+    animation: fadeUp 0.7s 0.3s ease both;
+    background: var(--light);
+    margin-top: 17px;
+  }
+  .hero-btns {
+    width: 90%;
+    max-width: 340px;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .belt-stripes span {
+    display: none;
   }
 }

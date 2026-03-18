@@ -78,9 +78,22 @@
 <body>
 
   <!-- ══ NAV — FAIXA PRETA 4 GRAUS ══ -->
+
   <header>
     <nav class="belt-nav-bar">
-      <ul class="nav-links">
+      <div class="hero-title-nav">
+        <img src="./assets/img/logo-leandro-silva.png"
+          alt="Logo do CT Leandro Silva, academia de Jiu-Jitsu em Fortaleza Ceará">
+      </div>
+      <a href="#topo" class="nav-brand" aria-label="Ir para o topo">
+        <h1 class="hero-title">
+          <span class="tl-nav">CT</span>
+          <span class="tl-nav">Leandro</span>
+          <span class="ts-nav">Silva</span>
+        </h1>
+      </a>
+
+      <ul class="nav-links" id="mainNav">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#modalidades">Modalidades</a></li>
         <li><a href="#horarios">Horários</a></li>
@@ -93,6 +106,10 @@
         <div class="belt-stripes"><span></span><span></span><span></span><span></span></div>
         <div class="belt-stripes-red"><span></span></div>
       </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        ☰
+      </button>
+
     </nav>
   </header>
 
@@ -559,6 +576,26 @@
       el.style.transition = 'opacity .4s ease, transform .4s ease';
       io.observe(el);
     });
+
+
+    const menuToggle = document.getElementById('menuToggle');
+    const beltNavBar = document.querySelector('.belt-nav-bar');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = beltNavBar.classList.toggle('menu-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        beltNavBar.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menu');
+      });
+    });
+
   </script>
 </body>
 

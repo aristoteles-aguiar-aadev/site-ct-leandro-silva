@@ -1076,6 +1076,31 @@ footer {
   color: rgba(255, 255, 255, 0.15);
   text-transform: uppercase;
 }
+.footer-dev {
+  font-size: 1rem;
+  color: var(--text-devlab);
+}
+
+.footer-dev-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-devlab);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-dev-link:hover {
+  color: var(--text-devlab);
+}
+
+.footer-dev-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: contain;
+}
 
 /* Scroll top */
 #scrollBtn {
@@ -1165,5 +1190,19 @@ footer {
     padding: 18px 28px;
     flex-direction: column;
     gap: 6px;
+  }
+  .footer-dev {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .footer-dev a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .footer-dev a:hover {
+    color: var(--red);
   }
 }

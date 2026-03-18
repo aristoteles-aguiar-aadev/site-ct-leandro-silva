@@ -279,6 +279,7 @@ body {
   max-width: 520px;
 }
 .hero-tiger {
+  align-items: center;
   font-size: 120px;
   filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.15));
 }
@@ -306,7 +307,8 @@ body {
   }
 
   .hero-title-logo {
-    margin: 14px 0 10px;
+    margin: 14px 0 20px;
+    align-items: center;
   }
 
   .hero-title-logo img {
@@ -623,13 +625,15 @@ blockquote.pull {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 34px;
+  width: 30px;
   background: repeating-linear-gradient(
     90deg,
-    var(--red) 0,
-    var(--red) 6px,
-    #111 6px,
-    #111 10px
+    var(--red) 2px,
+    var(--white) 2px,
+    var(--white) 5px,
+    var(--red) 5px,
+    var(--red) 9px,
+    var(--black) 9px
   );
 }
 
@@ -1120,6 +1124,12 @@ footer {
   }
   .hero-left {
     padding: 60px 32px;
+  }
+
+  .hero-title-logo {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    margin: 14px 0 20px;
   }
   .wrap {
     padding: 0 28px;
